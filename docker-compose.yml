@@ -16,7 +16,7 @@ services:
       - "5432:5432"
 
   app:
-    build: .
+    build: ./backend
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-photon}:${POSTGRES_PASSWORD:-photon}@db:5432/${POSTGRES_DB:-photon}
     depends_on:
